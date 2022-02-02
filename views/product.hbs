@@ -1,0 +1,19 @@
+<article class="product">
+    <h1>{{title}}</h1>
+    <h3>Price: {{price}} EUR</h3>
+
+    {{#if imgSrc}}
+    <img src={{imgSrc}} />
+    {{else}}
+    <img src="https://via.placeholder.com/600x400" alt={{title}} />
+    {{/if}}
+
+    {{#if categories}}
+    <p>Categories:</p>
+    <ul>
+        {{#each categories}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</article>
